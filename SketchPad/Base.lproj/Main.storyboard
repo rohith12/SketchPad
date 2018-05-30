@@ -89,10 +89,54 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="heE-r5-Xao">
                                 <rect key="frame" x="0.0" y="65" width="375" height="602"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="NwQ-ds-qw8">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlg-DJ-PYk">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="o4p-B3-H1R"/>
+                                            <constraint firstAttribute="width" constant="70" id="uxg-YS-pW8"/>
+                                        </constraints>
+                                        <state key="normal" image="color"/>
+                                        <connections>
+                                            <action selector="colorTapped:" destination="mUg-6I-XAT" eventType="touchUpInside" id="zor-gz-fao"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icW-ry-fZS">
+                                        <rect key="frame" x="152.5" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="2vn-yd-QAB"/>
+                                            <constraint firstAttribute="height" constant="70" id="Vl0-yP-YPd"/>
+                                        </constraints>
+                                        <state key="normal" image="size"/>
+                                        <connections>
+                                            <action selector="sizeTapped:" destination="mUg-6I-XAT" eventType="touchUpInside" id="3zu-uY-CpT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vJ-5x-v3b">
+                                        <rect key="frame" x="305" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="ea2-Ue-2hh"/>
+                                            <constraint firstAttribute="width" constant="70" id="wX6-Yz-QSl"/>
+                                        </constraints>
+                                        <state key="normal" image="erase"/>
+                                        <connections>
+                                            <action selector="eraseTapped:" destination="mUg-6I-XAT" eventType="touchUpInside" id="Iyg-0D-W6x"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="baX-mp-jXg"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="KMF-1p-qrb" firstAttribute="bottom" secondItem="NwQ-ds-qw8" secondAttribute="bottom" id="7X3-Mx-5Lk"/>
+                            <constraint firstItem="NwQ-ds-qw8" firstAttribute="trailing" secondItem="KMF-1p-qrb" secondAttribute="trailing" id="AK6-7G-qtM"/>
                             <constraint firstItem="zU5-eo-DG4" firstAttribute="leading" secondItem="amm-fo-DTy" secondAttribute="leading" id="Avg-aE-BX9"/>
+                            <constraint firstItem="NwQ-ds-qw8" firstAttribute="leading" secondItem="KMF-1p-qrb" secondAttribute="leading" id="DaS-gF-xt4"/>
                             <constraint firstItem="zU5-eo-DG4" firstAttribute="top" secondItem="KMF-1p-qrb" secondAttribute="top" constant="-20" id="PkT-kg-YX7"/>
                             <constraint firstItem="heE-r5-Xao" firstAttribute="leading" secondItem="KMF-1p-qrb" secondAttribute="leading" id="Scb-st-xXO"/>
                             <constraint firstAttribute="trailing" secondItem="zU5-eo-DG4" secondAttribute="trailing" id="U9E-41-ZCN"/>
@@ -132,4 +176,9 @@
             <point key="canvasLocation" x="-436" y="239"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="color" width="256" height="256"/>
+        <image name="erase" width="256" height="256"/>
+        <image name="size" width="256" height="256"/>
+    </resources>
 </document>
