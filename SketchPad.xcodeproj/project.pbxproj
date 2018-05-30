@@ -57,12 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				388A81C720BE33E9006FBF68 /* AppDelegate.swift */,
+				388A81DC20BE3746006FBF68 /* DrawViewController.swift */,
 				388A81CB20BE33E9006FBF68 /* Main.storyboard */,
 				388A81D120BE33E9006FBF68 /* Assets.xcassets */,
 				388A81D320BE33E9006FBF68 /* LaunchScreen.storyboard */,
 				388A81D620BE33E9006FBF68 /* Info.plist */,
 				388A81CE20BE33E9006FBF68 /* SketchPad.xcdatamodeld */,
-				388A81DC20BE3746006FBF68 /* DrawViewController.swift */,
 			);
 			path = SketchPad;
 			sourceTree = "<group>";
