@@ -79,26 +79,52 @@
             </objects>
             <point key="canvasLocation" x="324" y="238.83058470764618"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="wxt-jP-kle">
             <objects>
-                <viewController id="Yrp-e3-iko" sceneMemberID="viewController">
+                <viewController id="Yrp-e3-iko" customClass="DetailViewController" customModule="SketchPad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0VL-Cr-Smz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="61h-5v-e0t">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="61h-5v-e0t" firstAttribute="trailing" secondItem="nfd-KD-HxN" secondAttribute="trailing" id="E1u-5S-vqo"/>
+                            <constraint firstItem="61h-5v-e0t" firstAttribute="leading" secondItem="nfd-KD-HxN" secondAttribute="leading" id="NVc-fN-x1b"/>
+                            <constraint firstItem="61h-5v-e0t" firstAttribute="top" secondItem="nfd-KD-HxN" secondAttribute="top" id="RVp-Rf-oMf"/>
+                            <constraint firstItem="61h-5v-e0t" firstAttribute="leading" secondItem="nfd-KD-HxN" secondAttribute="leading" id="WHY-gk-UyD"/>
+                            <constraint firstItem="61h-5v-e0t" firstAttribute="bottom" secondItem="nfd-KD-HxN" secondAttribute="bottom" id="dQG-9G-N0I"/>
+                            <constraint firstItem="61h-5v-e0t" firstAttribute="top" secondItem="nfd-KD-HxN" secondAttribute="top" id="gNy-46-ECU"/>
+                            <constraint firstItem="61h-5v-e0t" firstAttribute="trailing" secondItem="nfd-KD-HxN" secondAttribute="trailing" id="oVR-nO-4f2"/>
+                            <constraint firstItem="61h-5v-e0t" firstAttribute="bottom" secondItem="nfd-KD-HxN" secondAttribute="bottom" id="ySW-ls-WlI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nfd-KD-HxN"/>
                     </view>
                     <navigationItem key="navigationItem" id="bJc-Oq-tyD">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="trash" id="mgP-NC-Qug"/>
-                            <barButtonItem systemItem="action" id="YAk-eF-SzV"/>
+                            <barButtonItem systemItem="trash" id="mgP-NC-Qug">
+                                <connections>
+                                    <action selector="deleteTapped:" destination="Yrp-e3-iko" id="LHu-fg-MPo"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="YAk-eF-SzV">
+                                <connections>
+                                    <action selector="shareTapped:" destination="Yrp-e3-iko" id="Ykj-G9-GbE"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="61h-5v-e0t" id="AIw-00-bHo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWD-PI-zaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="324" y="957"/>
+            <point key="canvasLocation" x="324" y="956.67166416791611"/>
         </scene>
         <!--Draw View Controller-->
         <scene sceneID="aTE-eE-P8B">
